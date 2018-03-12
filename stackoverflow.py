@@ -33,6 +33,7 @@ query=clean(query)
 #df1 = pd.read_csv('Answers.csv',encoding='iso-8859-1')
 #r=pd.merge(df1,df, left_on='ParentId', right_on='Id',how='left')
 #result = r.sort_values(['Score_y', 'Score_x'], ascending=[False, False])
+#result.to_csv("QA.csv",encoding='iso-8859-1')
 
 '''
 rawexe=
