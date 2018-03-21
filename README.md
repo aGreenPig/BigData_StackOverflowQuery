@@ -1,4 +1,4 @@
-# bigdata_stackoverflow
+# Stack Overflow Natural Language Query Challege
 
 Googling-StackOverflow is humorous name for a development technique that
 consists in Googling every programming task to find StackOverflow snippets of
