@@ -20,8 +20,3 @@ http://data.stackexchange.com/stackoverflow/queries
 Specifically, this final project requires you and your team to develop
 a recommendation system that given a list Natural Language statements,
 return a list of python snippets.
-For example the query: ‘Open a file’
-Will return a snippet like the following:
-with open ( n ewfil e , ’w’ ) as o u t f i l e :
-with open ( o l d f i l e , ’ r ’ , encoding=’ utf −8 ’) as i n f i l e :
-#your l o g i c go es h er e
