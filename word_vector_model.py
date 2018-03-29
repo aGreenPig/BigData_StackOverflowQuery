@@ -52,8 +52,8 @@ def sys_setup():
     dfq_full=pd.merge(dfq,tgroup,on='Id',how='outer')
     dfq_full.sort_values(['Score', 'CreationDate'], ascending=[False, False],inplace=True)
     dfq_full['Title_cleaned']=dfq_full['Title'].apply(clean)
-    dfq_full['Title_vector']=dfq_full['Title_cleaned'].apply(vectorize)
-    dfq_full.to_csv("Qfull.csv",encoding='iso-8859-1')
+    #dfq_full['Title_vector']=dfq_full['Title_cleaned'].apply(vectorize)
+    #dfq_full.to_csv("Qfull.csv",encoding='iso-8859-1')
     
     dfa.sort_values(['Score', 'CreationDate'], ascending=[False, False],inplace=True)
     dfqa=pd.merge(dfq_full,dfa, left_on='Id', right_on='ParentId',how='left')
@@ -107,7 +107,8 @@ if(not os.path.exists("QA.csv")):
     sys_setup()
 
 #read in the optimized dataset
-df = pd.read_csv('QA.csv',encoding='iso-8859-1')   
+df = pd.read_csv('QA.csv',encoding='iso-8859-1')
+df['Title_vector']=df['Title_cleaned'].apply(vectorize)
 
 query=input("Enter the query: ")
 while(len(query)==0):query=input("Enter the query: ") #in case the user inputs empty string
