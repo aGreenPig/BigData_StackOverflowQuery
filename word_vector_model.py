@@ -56,7 +56,7 @@ def sys_setup():
     dfq_full.to_csv("Qfull.csv",encoding='iso-8859-1')
     
     dfa.sort_values(['Score', 'CreationDate'], ascending=[False, False],inplace=True)
-    dfqa=pd.merge(dfq,dfa, left_on='Id', right_on='ParentId',how='left')
+    dfqa=pd.merge(dfq_full,dfa, left_on='Id', right_on='ParentId',how='left')
     dfqa.to_csv("QA.csv",encoding='iso-8859-1')
 
 #set up the system for starting the service
