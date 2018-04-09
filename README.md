@@ -36,8 +36,13 @@ Note: this program currently takes a long time to run.  The first time is the lo
 # Most important files:
 
 BigData_StackOverflowQuery/website/codesearch/word_vector_model.py:
+
  This file contains the model for selecting the answers.
+ 
 BigData_StackOverflowQuery/website/codesearch/views.py:
+
  This file contains the code to handle the request made by the user.
+ 
 BigData_StackOverflowQuery/website/templates/result.html
+
  This file contains the html code for the site.
