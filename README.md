@@ -33,7 +33,7 @@ return a list of python snippets.
 Note: this program currently takes a long time to run.  The first time is the longest, since the system needs to set up on your computer.  Also, currently, every time you search there is preparation that happens in the system.
 
 
-#Most important files:
+# Most important files:
 
 BigData_StackOverflowQuery/website/codesearch/word_vector_model.py
  - This file contains the model for selecting the answers.
