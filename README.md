@@ -43,6 +43,6 @@ BigData_StackOverflowQuery/website/codesearch/views.py:
 
  This file contains the code to handle the request made by the user.
  
-BigData_StackOverflowQuery/website/templates/result.html
+BigData_StackOverflowQuery/website/templates/result.html:
 
  This file contains the html code for the site.
