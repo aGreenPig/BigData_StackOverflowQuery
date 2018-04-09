@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h1>Python Code Search</h1>
+
+        <form name = "form" method="post" action="/codesearch/">
+            {% csrf_token %}
+            <label>Search: </label>
+            <input type="text" name="query" size="50">
+            <input type="submit" value="Submit">
+        </form>
+
+        <div>
+            <p id="search_results">
+                {% for result in result_list %}
+                    {% if 'title of question' in result %}
+                        <br/><h3>Title: </h3>
+                    {% elif 'answer to question' in result %}
+                        <br/><h2>Answer:</h2>
+                    {% else %}
+                        {{ result }} <br/>
+                    {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+
+    </body>
+</html>
