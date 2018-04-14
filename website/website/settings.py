@@ -55,7 +55,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/cs4266/BigData_StackOverflowQuery/website/templates'],
+        'DIRS': ['D:/BigData_StackOverflowQuery-master/website/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
