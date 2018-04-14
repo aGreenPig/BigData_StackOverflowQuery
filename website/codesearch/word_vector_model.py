@@ -1,23 +1,26 @@
 # include packages in need
 # for nltk stopwords, the corresponding corpuses need to be downloaded first hand
 
-from nltk.stem.porter import PorterStemmer
-from nltk.stem.wordnet import WordNetLemmatizer
-from nltk.corpus import stopwords
+#from nltk.stem.porter import PorterStemmer
+#from nltk.stem.wordnet import WordNetLemmatizer
+#from nltk.corpus import stopwords
+from codesearch import *
 from bs4 import BeautifulSoup
 import os
 import re
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
+#from tqdm import tqdm
 
 # change the directory to where you put this program as well as two raw datasets
-os.chdir(r"C:\cs4266\BigData_StackOverflowQuery\website\codesearch")
+os.chdir(ROOT_DIR+"codesearch")
+'''
 stop_words = set(stopwords.words('english'))
 # word stemmer and lemmatizer
 stemmer = PorterStemmer()
 lem = WordNetLemmatizer()
 embeddings_index = {}
+'''
 
 
 # param: a string value representing the query string
@@ -75,9 +78,9 @@ def sys_setup():
 def sys_prepare():
     print("Preparing the query system...")
     with open(
-            r'C:\cs4266\BigData_StackOverflowQuery\website\codesearch\glove.840B.300d.txt',
+            r'E:\NLP\spooky\glove.840B.300d.txt',
             encoding="utf-8") as f:
-        for line in tqdm(f):
+        for line in f:
             values = line.split()
             word = values[0]
             try:
@@ -125,16 +128,20 @@ def fetch_answer_for_web(r):
 # param: the query that the user entered
 # return: the formatted results of the search
 def run_program(q):
+    '''
     # preparing the system
     sys_prepare()
     if not os.path.exists("QA.csv"):
         sys_setup()
+    '''
 
     # read in the optimized dataset
     print('Finding results...')
+    '''
     df = pd.read_csv('QA.csv', encoding='iso-8859-1')
     df['Title_cleaned'] = df['Title'].apply(clean)
     df['Title_vector'] = df['Title_cleaned'].apply(vectorize)
+    '''
 
     query = q
     query = clean(query)  # clean the query
@@ -169,4 +176,9 @@ def run_program(q):
     if s == "":
         return "No results found"
     else:
+        s=s.replace('\n','<br>')
         return s
+
+        
+        
+        
