@@ -30,8 +30,6 @@ return a list of python snippets.
 4. Open a terminal and navigate to the BigData_StackOverflowQuery/website/ directory.  Run the command 'python manage.py runserver'.  If the file is not found, put in the full path to manage.py.  This will run the code on localhost on port 8000.  If you want to use a different port, specify the port number in the command.  For example, 'python manage.py runserver 8080'.
 5. Open localhost:8000/codesearch (or whatever port you used) in your browser.
 
-Note: this program currently takes a long time to run.  The first time is the longest, since the system needs to set up on your computer.  Also, currently, every time you search there is preparation that happens in the system.
-
 
 # Most important files:
 
