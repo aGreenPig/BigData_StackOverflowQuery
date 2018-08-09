@@ -1,5 +1,5 @@
 # Stack Overflow Natural Language Query Challege
-## video demo: https://youtu.be/VqJj71m7nQU
+## video demo: https://www.youtube.com/watch?v=VqJj71m7nQU
 
 Googling-StackOverflow is humorous name for a development technique that
 consists in Googling every programming task to find StackOverflow snippets of
